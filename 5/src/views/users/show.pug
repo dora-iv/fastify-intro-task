@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title User Profile
+  body
+    .container
+      h1 User Profile
+      dl.dl-horizontal
+        dt Username
+        dd #{user.username}
+        dt Email
+        dd #{user.email}
+      a.btn.btn-primary(href='/users')

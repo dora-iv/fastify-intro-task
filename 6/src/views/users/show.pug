@@ -1,0 +1,7 @@
+extends ../layout/page
+
+block content
+  h1= user.username
+  p ID пользователя: #{user.id}
+  p Email: #{user.email}
+  p Дата регистрации: #{user.registrationDate}

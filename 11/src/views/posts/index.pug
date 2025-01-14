@@ -1,0 +1,17 @@
+extends ../layout/page.pug
+
+block content
+  h1 Posts
+  ul
+    each post in posts
+      li
+        a(href=`/posts/${post.id}`) #{post.title}
+
+  nav
+    ul.pagination
+      if hasPreviousPage
+        li.page-item
+          a.page-link(href=`/posts?page=${previousPage}`) Previous
+      if hasNextPage
+        li.page-item
+          a.page-link(href=`/posts?page=${nextPage}`) Next

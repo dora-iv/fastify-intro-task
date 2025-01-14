@@ -1,0 +1,4 @@
+ul
+  each user in users
+    li
+      a(href=route("user", { id: user.id })) #{user.userName}

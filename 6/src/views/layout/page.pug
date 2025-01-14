@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title My Website
+    link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css")
+  body
+    header.navbar.navbar-expand-lg.navbar-light.bg-light
+      .container
+        a(href="/") Главная
+        a(href="/users") Пользователи
+
+    .container
+      //- Контент страницы, который будет меняться
+      block content
+
+    footer.mt-4.py-4.text-center.bg-light
+      .container
+        p © 2023 My Website | Сделано с ♥. Найти меня на GitHub:
+        a(href="https://github.com/dora-iv", target="_blank") GitHub

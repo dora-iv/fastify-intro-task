@@ -1,0 +1,18 @@
+extends ../layout/page.pug
+
+block content
+  h1.header Edit Post
+
+  form(action=`/posts/${post.id}`, method='post')
+    div
+      label.form-label Title:
+      input.form-control(type='text', name='title', value=post.title)
+      if errors.title
+        div.text-danger #{errors.title}
+    div
+      label.form-label Body:
+      textarea.form-control(name='body')= post.body
+      if errors.body
+        div.text-danger #{errors.body}
+    div
+      input.btn.btn-primary(type='submit', value='Update')
